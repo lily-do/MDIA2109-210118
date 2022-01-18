@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Counter</title>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            #counter {
+                display: flex;
+                padding: 5px;
+                background-color: #DAD;
+            }
+
+            #counter > button {
+                background-color: #bed;
+                border: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                font-size: 36px;
+            }
+
+            #counter > div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            }
+
+            #bar {
+                width: 0px;
+                height: 10px;
+                background-color: #bad;
+                transition: width 0.2s;
+            }
+    
+        </style>
+        <div id= 'counter'>
+            <button onclick="dec()">-</button>
+            <div>1</div>
+            <button onclick="inc()">+</button>
+        </div>
+        <div id='bar'></div>
+
+
+        <script>
+            var num = 1;
+
+            var num2 = "1"
+            num2 = num2+1
+            function dec(){                                               
+                
+                num = num - 1;
+                document.querySelector("#counter > div").innerText = num;
+                document.querySelector("#bar").style.width = (num*10)+"px";
+            }
+
+            function inc(){
+                num = num + 1;
+                document.querySelector("#counter > div").innerText = num ;
+
+            }
+        </script>
+        
+    </body>
+</html>
